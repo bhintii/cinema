@@ -14,14 +14,14 @@ class AudienceSeeder extends Seeder
      */
     public function run(): void
     {
-        $audience = Audience::all();
-        
+        $tickets = Ticket::all();
+        $categorys = ['Boy', 'Girl', 'Children', 'GrandPa', 'GrandMa'];
         for ($i = 1; $i <= 10; $i++) {
             Audience::create([
                 'ticket' => 'TICKET-' . $i,
-                'ticket_id' => $audience->random()->id,
-                'price' => fake()->date('Y-m-d'),
-              
+                'ticket_id' => $tickets->random()->id,
+                'birthdate' => fake()->date('Y-m-d'),
+                'category' => fake()->randomElement(['adult', 'child', 'student']),
             ]);
         }
     }

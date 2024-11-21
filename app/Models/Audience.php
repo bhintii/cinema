@@ -10,9 +10,9 @@ class Audience extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'ticket_id', 'birthdate'];
+    protected $fillable = ['ticket', 'ticket_id', 'birthdate'];
 
-    public function moviegoer()
+    public function audience()
     {
         return $this->belongsTo(Audience::class);
     }

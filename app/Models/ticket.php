@@ -17,7 +17,7 @@ class Ticket extends Model
 
     public function audience()
     {
-        return $this->hasMany(Audience::class);
+        return $this->hasMany(Ticket::class);
     }
 
     public static function rules($process)
