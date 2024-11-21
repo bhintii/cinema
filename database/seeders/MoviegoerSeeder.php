@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\moviegoers;
-use App\Models\ticket;
+use App\Models\Moviegoer;
+use App\Models\Moviegoers;
+use App\Models\Ticket;
 use Illuminate\Database\Seeder;
 use PHPUnit\Framework\Attributes\Ticket as AttributesTicket;
 
@@ -15,13 +16,13 @@ class TicketSeeder extends Seeder
     public function run(): void
     {
         $ticket = Ticket::all();
-        $categorys = ['Boy', 'Girl', 'Children', 'GrandPa', 'GrandMa'];
+        
         for ($i = 1; $i <= 10; $i++) {
-            moviegoers::create([
+            Moviegoer::create([
                 'ticket_code' => 'TICKET-' . $i,
                 'ticket_id' => $ticket->random()->id,
                 'price' => fake()->date('Y-m-d'),
-                'category' => $categorys[array_rand($categorys)],
+              
             ]);
         }
     }

@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\ticket;
+use App\Models\Ticket;
 use Illuminate\Database\Seeder;
 
 class TicketSeeder extends Seeder
 {
     public function run()
     {
-        ticket::create(['ticket_code' => 'TICKET-1', 'price' => '1000']);
-        ticket::create(['ticket_code' => 'TICKET-2', 'price' => '2000']);
-        ticket::create(['ticket_code' => 'TICKET-3', 'price' => '3000']);
-        ticket::create(['ticket_code' => 'TICKET-4', 'price' => '4000']);
-        ticket::create(['ticket_code' => 'TICKET-5', 'price' => '5000']);
+        Ticket::create(['ticket' => 'TICKET-1', 'price' => '10000']);
+        Ticket::create(['ticket' => 'TICKET-2', 'price' => '20000']);
+        Ticket::create(['ticket' => 'TICKET-3', 'price' => '30000']);
+        Ticket::create(['ticket' => 'TICKET-4', 'price' => '40000']);
+        Ticket::create(['ticket' => 'TICKET-5', 'price' => '50000']);
     }
 }

@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
-use Database\Seeders\TicketSeeder;
-use Database\Seeders\moviegoersSeeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             TicketSeeder::class,
-            moviegoersSeeder::class,
+            //MoviegoerSeeder::class,
+           
         ]);
     }
 }
