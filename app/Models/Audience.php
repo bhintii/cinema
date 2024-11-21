@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Moviegoer extends Model
+class Audience extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Moviegoer extends Model
 
     public function moviegoer()
     {
-        return $this->belongsTo(Moviegoer::class);
+        return $this->belongsTo(Audience::class);
     }
 
 }

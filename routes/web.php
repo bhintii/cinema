@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\MoviegoerController;
+use App\Http\Controllers\AudienceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',function(){
     return view('welcome');
 });
 
-Route::get('/moviegoers', [MoviegoerController::class, 'index']);
+Route::get('/audiences', [AudienceController::class, 'index']);
 
 
